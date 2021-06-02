@@ -1,9 +1,16 @@
 function Deposit() {
   const ctx = React.useContext(UserContext);
+
+  const balance = JSON.stringify(ctx.users[0].balance);
+  console.log(balance);
   return (
-    <h1>
-      Deposit
-      {JSON.stringify(ctx)}
-    </h1>
+    <Card
+      text-align="center"
+      bgcolor="primary"
+      header="Withdraw"
+      title="Available funds"
+      status={status}
+      body={balance}
+    />
   );
 }

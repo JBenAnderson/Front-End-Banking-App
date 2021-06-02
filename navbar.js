@@ -38,11 +38,7 @@ function NavBar() {
                 Withdraw
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#/balance/">
-                Balance
-              </a>
-            </li>
+
             <li className="nav-item">
               <a className="nav-link" href="#/alldata/">
                 AllData

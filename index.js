@@ -5,12 +5,14 @@ function Spa() {
         <NavBar />
         <UserContext.Provider
           value={{
-            users: {
-              name: "ben",
-              email: "ben@mit.edu",
-              password: "secret",
-              balance: 100,
-            },
+            users: [
+              {
+                name: "ben",
+                email: "ben@mit.edu",
+                password: "secret",
+                balance: 100,
+              },
+            ],
           }}
         >
           <Route path="/" exact component={Home} />
@@ -19,7 +21,6 @@ function Spa() {
           <Route path="/login/" component={Login} />
           <Route path="/deposit/" component={Deposit} />
           <Route path="/withdraw/" component={Withdraw} />
-          <Route path="/balance/" component={Balance} />
         </UserContext.Provider>
       </HashRouter>
     </>
