@@ -1,0 +1,12 @@
+body {
+  background-color: lightgray;
+}
+.card-header {
+  font-size: x-large !important;
+  align-self: center;
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
+}

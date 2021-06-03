@@ -8,7 +8,7 @@ function Deposit() {
       text-align="center"
       bgcolor="primary"
       header="Withdraw"
-      title="Available funds"
+      title="Current Balance"
       status={status}
       body={balance}
     />

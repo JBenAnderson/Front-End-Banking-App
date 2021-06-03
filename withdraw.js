@@ -24,6 +24,16 @@ function Withdraw() {
           </div>
 
           <br />
+
+          <div className="d-grid gap-2">
+            <button
+              type="submit"
+              className="btn btn-light"
+              //onClick={}
+            >
+              withdraw
+            </button>
+          </div>
         </>
       }
     />
