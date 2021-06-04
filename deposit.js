@@ -6,7 +6,6 @@ function Deposit() {
   return (
     <Card
       text-align="center"
-      bgcolor="primary"
       header="Withdraw"
       title="Current Balance"
       status={status}

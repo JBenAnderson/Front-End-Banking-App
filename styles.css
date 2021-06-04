@@ -5,12 +5,18 @@ body {
   font-size: x-large !important;
   align-self: center;
   text-align: center;
+  text-shadow: 2px 2px #000000;
 }
 
 .card-body {
   text-align: center;
-  background-color: darkgrey;
+  background-color: rgb(138, 138, 138);
 }
 .card-title {
-  text-shadow: 2px 2px #16096f;
+}
+
+.card {
+  align-self: center !important;
+  background-color: rgb(47, 164, 164);
+  box-shadow: 5px 5px #000000ad;
 }

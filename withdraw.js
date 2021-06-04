@@ -5,7 +5,6 @@ function Withdraw() {
   console.log(balance);
   return (
     <Card
-      bgcolor="primary"
       header="Withdraw Available Funds"
       title={balance}
       status={status}
