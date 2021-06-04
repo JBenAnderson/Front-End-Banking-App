@@ -5,7 +5,15 @@ function AllData() {
       text-align="center"
       header="All Data"
       status={status}
-      body={JSON.stringify(ctx)}
+      body={
+        <br>
+          <div></div>
+        </br>
+      }
     />
   );
+}
+
+{
+  JSON.stringify(ctx);
 }

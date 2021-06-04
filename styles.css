@@ -3,7 +3,7 @@ body {
 }
 .card-header {
   font-size: x-large !important;
-  align-self: center;
+
   text-align: center;
   text-shadow: 2px 2px #000000;
 }
@@ -18,5 +18,6 @@ body {
 .card {
   align-self: center !important;
   background-color: rgb(47, 164, 164);
-  box-shadow: 5px 5px #000000ad;
+  box-shadow: 5px 5px #0000009c;
+  grid-column: auto;
 }

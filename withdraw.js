@@ -6,7 +6,7 @@ function Withdraw() {
   return (
     <Card
       header="Withdraw Available Funds"
-      title={balance}
+      title={<div>${balance}</div>}
       status={status}
       body={
         <>
