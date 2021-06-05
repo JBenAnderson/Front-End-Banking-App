@@ -4,12 +4,14 @@ function Login() {
   const login = JSON.stringify(ctx.users[0].name);
   console.log(login);
   return (
-    <Card
-      txtcolor="white"
-      header="Login"
-      title="Your current login"
-      status={status}
-      body={login}
-    />
+    <div className="container">
+      <Card
+        txtcolor="white"
+        header="Login"
+        title="Your current login"
+        status={status}
+        body={login}
+      />
+    </div>
   );
 }
