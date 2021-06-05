@@ -13,7 +13,13 @@ body {
 }
 
 .card {
-  background-color: rgb(47, 164, 164);
+  background-color: rgb(116, 223, 223);
   box-shadow: 5px 5px #0000009c;
   color: white;
+  display: flex;
+  align-content: center;
+}
+
+outer-card {
+  background-color: white;
 }

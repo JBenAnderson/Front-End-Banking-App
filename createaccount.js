@@ -37,83 +37,85 @@ function CreateAccount() {
 
   return (
     <div className="container">
-      <Card
-        header="Create Account"
-        status={status}
-        body={
-          show ? (
-            <>
-              Name
-              <br />
-              <input
-                type="input"
-                className="form-control"
-                id="name"
-                placeholder="Enter name"
-                value={name}
-                onChange={(e) => setName(e.currentTarget.value)}
-              />
-              <br />
-              Email address
-              <br />
-              <input
-                type="input"
-                className="form-control"
-                id="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.currentTarget.value)}
-              />
-              <br />
-              Password
-              <br />
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                placeholder="Enter password"
-                value={password}
-                onChange={(e) => setPassword(e.currentTarget.value)}
-              />
-              <br />
-              How much to Deposit?
-              <br />
-              <div className="input-group mb-3">
-                <span className="input-group-text">$</span>
+      <div className="card align-items-center">
+        <Card
+          header="Create Account"
+          status={status}
+          body={
+            show ? (
+              <>
+                Name
+                <br />
                 <input
-                  id="deposit"
-                  value={deposit}
-                  type="number"
+                  type="input"
                   className="form-control"
-                  aria-label="Amount (to the nearest dollar)"
-                  onChange={(e) => setDeposit(e.currentTarget.value)}
+                  id="name"
+                  placeholder="Enter name"
+                  value={name}
+                  onChange={(e) => setName(e.currentTarget.value)}
                 />
-                <span className="input-group-text">.00</span>
-              </div>
-              <br />
-              <br />
-              <button
-                type="submit"
-                className="btn btn-light"
-                onClick={handleCreate}
-              >
-                Create Account
-              </button>
-            </>
-          ) : (
-            <>
-              <h5>Success</h5>
-              <button
-                type="submit"
-                className="btn btn-light"
-                onClick={clearForm}
-              >
-                Add another account
-              </button>
-            </>
-          )
-        }
-      />
+                <br />
+                Email address
+                <br />
+                <input
+                  type="input"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={(e) => setEmail(e.currentTarget.value)}
+                />
+                <br />
+                Password
+                <br />
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  placeholder="Enter password"
+                  value={password}
+                  onChange={(e) => setPassword(e.currentTarget.value)}
+                />
+                <br />
+                How much to Deposit?
+                <br />
+                <div className="input-group mb-3">
+                  <span className="input-group-text">$</span>
+                  <input
+                    id="deposit"
+                    value={deposit}
+                    type="number"
+                    className="form-control"
+                    aria-label="Amount (to the nearest dollar)"
+                    onChange={(e) => setDeposit(e.currentTarget.value)}
+                  />
+                  <span className="input-group-text">.00</span>
+                </div>
+                <br />
+                <br />
+                <button
+                  type="submit"
+                  className="btn btn-light"
+                  onClick={handleCreate}
+                >
+                  Create Account
+                </button>
+              </>
+            ) : (
+              <>
+                <h5>Success</h5>
+                <button
+                  type="submit"
+                  className="btn btn-light"
+                  onClick={clearForm}
+                >
+                  Add another account
+                </button>
+              </>
+            )
+          }
+        />
+      </div>
     </div>
   );
 }

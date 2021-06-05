@@ -1,7 +1,7 @@
 function Home() {
   return (
     <div className="container">
-      <div className="row align-items-center h-100">
+      <div className="card align-items-center">
         <Card
           txtcolor="white"
           header="Front-End Bank Landing Page"

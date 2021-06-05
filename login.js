@@ -5,13 +5,15 @@ function Login() {
   console.log(login);
   return (
     <div className="container">
-      <Card
-        txtcolor="white"
-        header="Login"
-        title="Your current login"
-        status={status}
-        body={login}
-      />
+      <div className="card align-items-center">
+        <Card
+          txtcolor="white"
+          header="Login"
+          title="Your current login"
+          status={status}
+          body={login}
+        />
+      </div>
     </div>
   );
 }
