@@ -7,16 +7,23 @@ function Spa() {
           value={{
             users: [
               {
-                email: "tom@mit.edu",
-                name: "tom",
-                password: "captain america",
-                balance: 1200,
+                email: "JSmith@mit.edu",
+                name: "John Smith",
+                password: "rubyred1",
+                balance: 588,
               },
               {
                 email: "peterparker@mit.edu",
-                name: "Peter",
-                password: "spidey",
-                balance: 1200,
+                name: "Peter Parker",
+                password: "spidey2099",
+                balance: 1207,
+              },
+
+              {
+                email: "bwayne13@WayneEnterprise.com",
+                name: "Bruce Wayne",
+                password: "batfan77",
+                balance: 126704,
               },
             ],
           }}

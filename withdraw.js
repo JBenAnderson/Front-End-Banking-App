@@ -1,7 +1,7 @@
 function Withdraw() {
   const ctx = React.useContext(UserContext);
 
-  const balance = JSON.stringify(ctx.users[0].balance);
+  const balance = JSON.stringify(ctx.users[ctx.users.length - 1].balance);
   console.log(balance);
   return (
     <div className="container">

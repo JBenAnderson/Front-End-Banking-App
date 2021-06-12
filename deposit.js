@@ -1,8 +1,9 @@
 function Deposit() {
+  const [deposit, setDeposit] = React.useState("");
   const ctx = React.useContext(UserContext);
 
-  const balance = JSON.stringify(ctx.users[0].balance);
-  console.log(balance);
+  const balance = ctx.users[ctx.users.length - 1].balance;
+
   return (
     <div className="container">
       <div className="card align-items-center">
@@ -13,27 +14,29 @@ function Deposit() {
           body={
             <>
               <br />
+              How Much To Deposit?
+              <br />
               <div className="input-group mb-3">
                 <span className="input-group-text">$</span>
                 <input
-                  type="text"
+                  id="deposit"
+                  value={deposit}
+                  type="number"
                   className="form-control"
                   aria-label="Amount (to the nearest dollar)"
+                  onChange={(e) => setDeposit(e.currentTarget.value)}
                 />
                 <span className="input-group-text">.00</span>
               </div>
-
               <br />
-
-              <div className="d-grid gap-2">
-                <button
-                  type="submit"
-                  className="btn btn-light"
-                  //onClick={}
-                >
-                  deposit
-                </button>
-              </div>
+              <br />
+              <button
+                type="submit"
+                className="btn btn-light"
+                onClick={(e) => {}}
+              >
+                Add Funds
+              </button>
             </>
           }
         />

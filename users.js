@@ -1,9 +1,9 @@
-function Users(email, name, password, balance) {
+function Users() {
   let ctx = React.useContext(UserContext);
   let form = [];
 
-  function getUsers(i) {
-    for (i = 0; i < ctx.users.length; i++) {
+  function getUsers(email, name, password, balance) {
+    for (let i = 0; i < ctx.users.length; i++) {
       email = ctx.users[i].email;
       name = ctx.users[i].name;
       password = ctx.users[i].password;

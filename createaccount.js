@@ -61,7 +61,7 @@ function CreateAccount() {
                   onChange={(e) => setName(e.currentTarget.value)}
                 />
                 <br />
-                Email address
+                Email Address
                 <br />
                 <input
                   type="input"
@@ -83,7 +83,7 @@ function CreateAccount() {
                   onChange={(e) => setPassword(e.currentTarget.value)}
                 />
                 <br />
-                How much to Deposit?
+                Initial Deposit Amount?
                 <br />
                 <div className="input-group mb-3">
                   <span className="input-group-text">$</span>
