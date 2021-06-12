@@ -1,17 +1,8 @@
 function AllData() {
   let ctx = React.useContext(UserContext);
 
-  const html = [];
-  const num = 0;
-  for (let i = 0; i < ctx.users.length; i++) {
-    html.push(i);
-    //let tempNum = html.shift();
-    //tempNum = num;
-  }
-
-  console.log(html);
   return (
-    <div className="container">
+    <div className="container" id="nom">
       <table id="myTable" className="table table-striped">
         <thead>
           <tr>
@@ -24,14 +15,7 @@ function AllData() {
 
         <tbody id="tbody">
           <>
-            <tr>
-              <th scope="row">
-                {JSON.stringify(ctx.users[ctx.users.length - 1].email)}
-              </th>
-              <th scope="row">{JSON.stringify(ctx.users[num].name)}</th>
-              <th scope="row">{JSON.stringify(ctx.users[num].password)}</th>
-              <th scope="row">{JSON.stringify(ctx.users[num].balance)}</th>
-            </tr>
+            <Users />
           </>
         </tbody>
       </table>
