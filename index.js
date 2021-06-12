@@ -12,6 +12,12 @@ function Spa() {
                 password: "captain america",
                 balance: 1200,
               },
+              {
+                email: "peterparker@mit.edu",
+                name: "Peter",
+                password: "spidey",
+                balance: 1200,
+              },
             ],
           }}
         >
