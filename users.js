@@ -1,4 +1,4 @@
-function Users(email, name, password, balance, form) {
+function Users(email, name, password, balance) {
   let ctx = React.useContext(UserContext);
 
   function getEmail() {
