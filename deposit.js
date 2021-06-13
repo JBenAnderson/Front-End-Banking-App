@@ -1,7 +1,7 @@
 function Deposit() {
-  const [deposit, setDeposit] = React.useState("");
+  const [deposit, setDeposit] = React.useState(0);
   const ctx = React.useContext(UserContext);
-
+  const newDeposit = 0;
   const balance = ctx.users[ctx.users.length - 1].balance;
 
   return (
@@ -33,7 +33,16 @@ function Deposit() {
               <button
                 type="submit"
                 className="btn btn-light"
-                onClick={(e) => {}}
+                onClick={(e) => {
+                  if (deposit < 0) {
+                    alert("You cannot enter a negative number");
+                  } else {
+                    function calculate() {
+                      console.log(deposit);
+                    }
+                    calculate();
+                  }
+                }}
               >
                 Add Funds
               </button>
