@@ -3,6 +3,7 @@ function Deposit() {
   const ctx = React.useContext(UserContext);
   const newDeposit = 0;
   const balance = ctx.users[ctx.users.length - 1].balance;
+  const currentUser = ctx.users[ctx.users.length - 1];
 
   return (
     <div className="container">
@@ -35,10 +36,22 @@ function Deposit() {
                 className="btn btn-light"
                 onClick={(e) => {
                   if (deposit < 0) {
-                    alert("You cannot enter a negative number");
+                    alert(
+                      "You cannot enter a negative number here.  If you would to withdraw, please visit the Withdraw Page."
+                    );
                   } else {
                     function calculate() {
-                      console.log(deposit);
+                      let intDeposit = parseInt(deposit);
+                      let initialValue = balance;
+
+                      console.log(initialValue + intDeposit);
+                      {
+                        {
+                          currentUser.balance = initialValue + intDeposit;
+                          setDeposit(currentUser.balance);
+                          console.log(currentUser);
+                        }
+                      }
                     }
                     calculate();
                   }
