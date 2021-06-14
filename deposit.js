@@ -34,6 +34,7 @@ function Deposit() {
               <button
                 type="submit"
                 className="btn btn-light"
+                id="depositButton"
                 onClick={(e) => {
                   if (deposit < 0) {
                     alert(
@@ -44,12 +45,10 @@ function Deposit() {
                       let intDeposit = parseInt(deposit);
                       let initialValue = balance;
 
-                      console.log(initialValue + intDeposit);
                       {
                         {
                           currentUser.balance = initialValue + intDeposit;
-                          setDeposit(currentUser.balance);
-                          console.log(currentUser);
+                          setDeposit(0);
                         }
                       }
                     }
