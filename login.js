@@ -9,9 +9,23 @@ function Login() {
         <Card
           txtcolor="white"
           header="Login"
-          title="Your current login"
+          title=""
           status={status}
-          body={login}
+          body={
+            <>
+              <div>
+                <img
+                  src="locked.png"
+                  className="img-fluid"
+                  alt="Responsive image"
+                />
+              </div>
+              <div>
+                You are logged in as:
+                <h3>{login}</h3>
+              </div>
+            </>
+          }
         />
       </div>
     </div>

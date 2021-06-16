@@ -1,5 +1,6 @@
 body {
-  background-color: lightgray;
+  background-color: rgb(109, 221, 255);
+  display: inherit;
 }
 .card-header {
   font-size: x-large !important;
@@ -9,18 +10,18 @@ body {
 
 .card-body {
   text-align: center;
-  background-color: rgb(103, 103, 103);
+  background-color: rgb(136, 136, 136);
 }
 
 .card {
   background-color: rgb(116, 223, 223);
   box-shadow: 5px 5px #0000009c;
-  color: white;
+
   display: flex;
   align-content: center;
 }
 
 .container {
-  width: 1200px;
-  height: 1200px;
+  width: 1200px !important;
+  height: 550px !important;
 }

@@ -50,6 +50,11 @@ function CreateAccount() {
           body={
             show ? (
               <>
+                <img
+                  src="clipboard.png"
+                  className="img-fluid"
+                  alt="Responsive image"
+                />
                 Name
                 <br />
                 <input
