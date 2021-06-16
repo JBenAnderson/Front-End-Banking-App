@@ -1,7 +1,8 @@
 function Deposit() {
   const [deposit, setDeposit] = React.useState(0);
+  const [disabled, setDisabled] = React.useState(true);
   const ctx = React.useContext(UserContext);
-  const newDeposit = 0;
+
   const balance = ctx.users[ctx.users.length - 1].balance;
   const currentUser = ctx.users[ctx.users.length - 1];
 
@@ -25,21 +26,26 @@ function Deposit() {
                   type="number"
                   className="form-control"
                   aria-label="Amount (to the nearest dollar)"
-                  onChange={(e) => setDeposit(e.currentTarget.value)}
+                  onChange={(e) => {
+                    setDeposit(e.currentTarget.value);
+                    setDisabled(false);
+                  }}
                 />
                 <span className="input-group-text">.00</span>
               </div>
               <br />
               <br />
               <button
+                disabled={disabled}
                 type="submit"
                 className="btn btn-light"
                 id="depositButton"
                 onClick={(e) => {
                   if (deposit < 0) {
                     alert(
-                      "You cannot enter a negative number here.  If you would to withdraw, please visit the Withdraw Page."
+                      "You cannot enter a negative number here.  If you would like to withdraw, please visit the Withdraw Page."
                     );
+                    setDeposit(0);
                   } else {
                     function calculate() {
                       let intDeposit = parseInt(deposit);
@@ -53,6 +59,7 @@ function Deposit() {
                       }
                     }
                     calculate();
+                    setDisabled(true);
                   }
                 }}
               >
