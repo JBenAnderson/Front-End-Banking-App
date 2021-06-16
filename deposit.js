@@ -11,10 +11,24 @@ function Deposit() {
       <div className="card align-items-center">
         <Card
           header="Deposit Funds"
-          title={<div>${balance}</div>}
+          title={
+            <>
+              <img
+                src="wallet.png"
+                className="img-fluid"
+                alt="Responsive image"
+              />
+            </>
+          }
           status={status}
           body={
             <>
+              <br />
+              <div>
+                Your current balance is:
+                <h1> ${balance}</h1>
+              </div>
+              <br />
               <br />
               How Much To Deposit?
               <br />
