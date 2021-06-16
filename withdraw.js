@@ -1,39 +1,84 @@
 function Withdraw() {
+  const [withdraw, setWithdraw] = React.useState(0);
+  const [disabled, setDisabled] = React.useState(true);
   const ctx = React.useContext(UserContext);
 
-  const balance = JSON.stringify(ctx.users[ctx.users.length - 1].balance);
-  console.log(balance);
+  const balance = ctx.users[ctx.users.length - 1].balance;
+  const currentUser = ctx.users[ctx.users.length - 1];
+
   return (
     <div className="container">
       <div className="card align-items-center">
         <Card
-          header="Withdraw Available Funds"
-          title={<div>${balance}</div>}
+          header="Withdraw Funds"
+          title={
+            <>
+              <img
+                src="vault.png"
+                className="img-fluid"
+                alt="Responsive image"
+              />
+            </>
+          }
           status={status}
           body={
             <>
               <br />
+              <div>
+                Your current balance is:
+                <h1> ${balance}</h1>
+              </div>
+              <br />
+              <br />
+              How Much To Withdraw?
+              <br />
               <div className="input-group mb-3">
                 <span className="input-group-text">$</span>
                 <input
-                  type="text"
+                  id="withdraw"
+                  value={withdraw}
+                  type="number"
                   className="form-control"
                   aria-label="Amount (to the nearest dollar)"
+                  onChange={(e) => {
+                    setWithdraw(e.currentTarget.value);
+                    setDisabled(false);
+                  }}
                 />
                 <span className="input-group-text">.00</span>
               </div>
-
               <br />
+              <br />
+              <button
+                disabled={disabled}
+                type="submit"
+                className="btn btn-light"
+                id="withdrawButton"
+                onClick={(e) => {
+                  if (withdraw < 0) {
+                    alert(
+                      "You cannot enter a negative number here.  If you would like to make a deposit, please visit the Deposit Page."
+                    );
+                    setWithdraw(0);
+                  } else {
+                    function calculate() {
+                      let intWithdraw = parseInt(withdraw);
+                      let initialValue = balance;
 
-              <div className="d-grid gap-2">
-                <button
-                  type="submit"
-                  className="btn btn-light"
-                  //onClick={}
-                >
-                  withdraw
-                </button>
-              </div>
+                      {
+                        {
+                          currentUser.balance = initialValue - intWithdraw;
+                          setWithdraw(0);
+                        }
+                      }
+                    }
+                    calculate();
+                    setDisabled(true);
+                  }
+                }}
+              >
+                Get Funds
+              </button>
             </>
           }
         />

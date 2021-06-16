@@ -57,7 +57,7 @@ function Deposit() {
                 onClick={(e) => {
                   if (deposit < 0) {
                     alert(
-                      "You cannot enter a negative number here.  If you would like to withdraw, please visit the Withdraw Page."
+                      "You cannot enter a negative number here.  If you would like to make a withdraw, please visit the Withdraw Page."
                     );
                     setDeposit(0);
                   } else {

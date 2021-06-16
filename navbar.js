@@ -1,7 +1,7 @@
 function NavBar() {
   const ctx = React.useContext(UserContext);
   //const userName = ctx.users[ctx.users.length - 1].name;
-  console.log(ctx);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
