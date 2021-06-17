@@ -11,10 +11,10 @@ function Users() {
 
       form.push([
         <tr key="tablerow">
-          <th key="email">{JSON.stringify(email)}</th>
+          <th key="email">{email}</th>
           <th key="name">{JSON.stringify(name)}</th>
-          <th key="password">{JSON.stringify(password)}</th>
-          <th key="balance">${JSON.stringify(balance)}</th>
+          <th key="password">{password}</th>
+          <th key="balance">${balance}</th>
         </tr>,
       ]);
     }
