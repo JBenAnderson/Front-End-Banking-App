@@ -1,74 +1,105 @@
 function NavBar() {
   const ctx = React.useContext(UserContext);
-  //const userName = ctx.users[ctx.users.length - 1].name;
+  const [disabled, setDisabled] = React.useState("nav-link");
 
   return (
-    // <>
-    //   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    //     <a className="navbar-brand" href="#">
-    //       Front-End Bank
-    //     </a>
-    //     <button
-    //       className="navbar-toggler"
-    //       type="button"
-    //       data-toggle="collapse"
-    //       data-target="#navbarNav"
-    //       aria-controls="navbarNav"
-    //       aria-expanded="false"
-    //       aria-label="Toggle navigation"
-    //     >
-    //       <span className="navbar-toggler-icon"></span>
-    //     </button>
-    //     <div className="collapse navbar-collapse" id="navbarNav">
-    //       <ul className="navbar-nav">
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#/CreateAccount/">
-    //             Create Account
-    //           </a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#/login/">
-    //             Login
-    //           </a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#/deposit/">
-    //             Deposit
-    //           </a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#/withdraw/">
-    //             Withdraw
-    //           </a>
-    //         </li>
-
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#/alldata/">
-    //             AllData
-    //           </a>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </nav>
-    // </>
-
     <nav className="nav nav-pills nav-fill">
-      <a className="nav-link active" aria-current="page" href="#/">
+      <a
+        id="home"
+        className="nav-link active"
+        aria-current="page"
+        href="#/"
+        onClick={(e) => {
+          e.currentTarget.className = "nav-link active";
+
+          document.querySelector("#createAccount").className = "nav-link";
+          document.querySelector("#login").className = "nav-link";
+          document.querySelector("#deposit").className = "nav-link";
+          document.querySelector("#withdraw").className = "nav-link";
+          document.querySelector("#alldata").className = "nav-link";
+        }}
+      >
         Front-End Bank Home
       </a>
-      <a className="nav-link" href="#/CreateAccount/">
+      <a
+        id="createAccount"
+        className="nav-link"
+        href="#/CreateAccount/"
+        onClick={(e) => {
+          e.currentTarget.className = "nav-link active";
+
+          document.querySelector("#home").className = "nav-link";
+          document.querySelector("#login").className = "nav-link";
+          document.querySelector("#deposit").className = "nav-link";
+          document.querySelector("#withdraw").className = "nav-link";
+          document.querySelector("#alldata").className = "nav-link";
+        }}
+      >
         Create Account
       </a>
-      <a className="nav-link" href="#/login/">
+      <a
+        id="login"
+        className="nav-link"
+        href="#/login/"
+        onClick={(e) => {
+          e.currentTarget.className = "nav-link active";
+
+          document.querySelector("#home").className = "nav-link";
+          document.querySelector("#createAccount").className = "nav-link";
+          document.querySelector("#deposit").className = "nav-link";
+          document.querySelector("#withdraw").className = "nav-link";
+          document.querySelector("#alldata").className = "nav-link";
+        }}
+      >
         Login
       </a>
-      <a className="nav-link" href="#/deposit">
+      <a
+        id="deposit"
+        className="nav-link"
+        href="#/deposit"
+        onClick={(e) => {
+          e.currentTarget.className = "nav-link active";
+
+          document.querySelector("#home").className = "nav-link";
+          document.querySelector("#createAccount").className = "nav-link";
+          document.querySelector("#login").className = "nav-link";
+          document.querySelector("#withdraw").className = "nav-link";
+          document.querySelector("#alldata").className = "nav-link";
+          console.log("hello");
+        }}
+      >
         Deposit
       </a>
-      <a className="nav-link" href="#/withdraw/">
+      <a
+        id="withdraw"
+        className="nav-link"
+        href="#/withdraw/"
+        onClick={(e) => {
+          e.currentTarget.className = "nav-link active";
+
+          document.querySelector("#home").className = "nav-link";
+          document.querySelector("#createAccount").className = "nav-link";
+          document.querySelector("#login").className = "nav-link";
+          document.querySelector("#deposit").className = "nav-link";
+          document.querySelector("#alldata").className = "nav-link";
+        }}
+      >
         Withdraw
       </a>
-      <a className="nav-link" href="#/alldata/">
+      <a
+        id="alldata"
+        className="nav-link"
+        href="#/alldata/"
+        onClick={(e) => {
+          e.currentTarget.className = "nav-link active";
+
+          document.querySelector("#home").className = "nav-link";
+          document.querySelector("#createAccount").className = "nav-link";
+          document.querySelector("#login").className = "nav-link";
+          document.querySelector("#deposit").className = "nav-link";
+          document.querySelector("#withdraw").className = "nav-link";
+        }}
+      >
         AllData
       </a>
     </nav>
