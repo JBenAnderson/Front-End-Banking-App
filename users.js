@@ -8,6 +8,7 @@ function Users() {
       name = ctx.users[i].name;
       password = ctx.users[i].password;
       balance = ctx.users[i].balance;
+      balance = new Intl.NumberFormat().format(balance);
 
       form.push([
         <tr key="tablerow">

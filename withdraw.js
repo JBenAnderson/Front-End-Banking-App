@@ -4,6 +4,7 @@ function Withdraw() {
   const ctx = React.useContext(UserContext);
 
   const balance = ctx.users[ctx.users.length - 1].balance;
+
   const currentUser = ctx.users[ctx.users.length - 1];
 
   return (
@@ -26,7 +27,9 @@ function Withdraw() {
               <br />
               <div>
                 Your current balance is:
-                <h1> ${balance}</h1>
+                <h1 id="balanceField">
+                  ${new Intl.NumberFormat().format(balance)}
+                </h1>
               </div>
               <br />
               <br />
