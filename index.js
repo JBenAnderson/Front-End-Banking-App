@@ -41,3 +41,10 @@ function Spa() {
 }
 
 ReactDOM.render(<Spa />, document.getElementById("root"));
+
+//<Route path="/" exact component={Home} />
+//<Route path="/CreateAccount/" component={CreateAccount} />
+//<Route path="/alldata/" component={AllData} />
+//<Route path="/login/" component={Login} />
+// <Route path="/deposit/" component={Deposit} />
+//<Route path="/withdraw/" component={Withdraw} />

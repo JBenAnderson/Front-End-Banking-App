@@ -22,7 +22,7 @@ function Login() {
               </div>
               <div>
                 You are logged in as:
-                <h3>{login}</h3>
+                <h3 id="loginField">{login}</h3>
               </div>
             </>
           }

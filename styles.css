@@ -1,10 +1,11 @@
 body {
-  background-color: rgb(109, 221, 255);
+  background-color: rgb(176, 237, 255);
 }
 .card-header {
   font-size: x-large !important;
   text-align: center;
   text-shadow: 2px 2px #000000;
+  background-color: rgb(116, 223, 223);
 }
 
 .card-body {
@@ -15,6 +16,12 @@ body {
 .card {
   background-color: rgb(116, 223, 223);
   box-shadow: 5px 5px #0000009c;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(70, 252, 250, 1) 100%
+  );
 
   display: flex;
   align-content: center;
@@ -23,4 +30,16 @@ body {
 .container {
   width: 1200px !important;
   height: 550px !important;
+}
+
+#balanceField {
+  text-shadow: 2px 2px #000000;
+}
+
+#loginField {
+  text-shadow: 2px 2px #000000;
+}
+
+#myTable {
+  background-color: rgba(255, 255, 255, 0.228);
 }

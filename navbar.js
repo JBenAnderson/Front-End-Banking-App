@@ -1,12 +1,13 @@
 function NavBar() {
   const ctx = React.useContext(UserContext);
   const [disabled, setDisabled] = React.useState("nav-link");
+  const NavLink = ReactRouterDOM.Link;
 
   return (
     <nav className="nav nav-pills nav-fill">
       <a
         id="home"
-        className="nav-link active"
+        className="nav-link"
         aria-current="page"
         href="#/"
         onClick={(e) => {
@@ -65,7 +66,6 @@ function NavBar() {
           document.querySelector("#login").className = "nav-link";
           document.querySelector("#withdraw").className = "nav-link";
           document.querySelector("#alldata").className = "nav-link";
-          console.log("hello");
         }}
       >
         Deposit
