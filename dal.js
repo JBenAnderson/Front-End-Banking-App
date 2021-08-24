@@ -19,18 +19,16 @@ function create(name, email, password) {
       err ? reject(err) : resolve(doc);
     });
   });
-
-  // all users
-  function all() {
-    return new Promise((resolve, reject) => {
-      const customers = db
-        .collection("users")
-        .find({})
-        .toArray(function (err, docs) {
-          err ? reject(err) : resolve(docs);
-        });
-    });
-  }
 }
-
+// all users
+function all() {
+  return new Promise((resolve, reject) => {
+    const customers = db
+      .collection("users")
+      .find({})
+      .toArray(function (err, docs) {
+        err ? reject(err) : resolve(docs);
+      });
+  });
+}
 module.exports = { create, all };

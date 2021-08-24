@@ -17,6 +17,8 @@ function CreateAccount() {
     return true;
   }
 
+  // experimental mongodb create account
+
   function handleCreate() {
     console.log(name, email, password);
     if (!validate(name, "name")) return;
