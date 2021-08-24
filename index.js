@@ -1,50 +1,37 @@
-function Spa() {
-  return (
-    <>
-      <HashRouter>
-        <NavBar />
-        <UserContext.Provider
-          value={{
-            users: [
-              {
-                email: "JSmith@mit.edu",
-                name: "John Smith",
-                password: "rubyred1",
-                balance: 588,
-              },
-              {
-                email: "peterparker@mit.edu",
-                name: "Peter Parker",
-                password: "spidey2099",
-                balance: 1207,
-              },
+var express = require("express");
+var app = express();
+var cors = require("cors");
 
-              {
-                email: "bwayne13@WayneEnterprise.com",
-                name: "Bruce Wayne",
-                password: "batfan77",
-                balance: 126704,
-              },
-            ],
-          }}
-        >
-          <Route path="/" exact component={Home} />
-          <Route path="/CreateAccount/" component={CreateAccount} />
-          <Route path="/alldata/" component={AllData} />
-          <Route path="/login/" component={Login} />
-          <Route path="/deposit/" component={Deposit} />
-          <Route path="/withdraw/" component={Withdraw} />
-        </UserContext.Provider>
-      </HashRouter>
-    </>
-  );
-}
+//used to serve static files from public directory
+app.use(express.static("public"));
+app.use(cors());
 
-ReactDOM.render(<Spa />, document.getElementById("root"));
+//create user account
+app.get("/account/create/:name/:email/:password", function (req, res) {
+  res.send({
+    name: req.params.name,
+    email: req.params.email,
+    password: req.params.password,
+  });
+});
 
-//<Route path="/" exact component={Home} />
-//<Route path="/CreateAccount/" component={CreateAccount} />
-//<Route path="/alldata/" component={AllData} />
-//<Route path="/login/" component={Login} />
-// <Route path="/deposit/" component={Deposit} />
-//<Route path="/withdraw/" component={Withdraw} />
+// logging in a user
+app.get("/acount/login/:email/:password", function (req, res) {
+  res.send({
+    email: req.params.email,
+    password: req.params.password,
+  });
+});
+
+// returning all accounts
+app.get("/account/all", function (req, res) {
+  res.send({
+    name: "peter",
+    email: "peter@mit.edu",
+    password: "secret",
+  });
+});
+
+var port = 3000;
+app.listen(port);
+console.log("Running on port: " + port);

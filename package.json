@@ -1,0 +1,23 @@
+{
+  "name": "front-end-banking-app",
+  "version": "1.0.0",
+  "description": "We are going to create a front-end React banking application using the development environment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBenAnderson/Front-End-Banking-App.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JBenAnderson/Front-End-Banking-App/issues"
+  },
+  "homepage": "https://github.com/JBenAnderson/Front-End-Banking-App#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
