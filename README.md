@@ -1,7 +1,19 @@
 * Project Title: Front-End-Banking-App
-* Description: Full Stack upgrade to this project now includes Express & MongoDB for handling your own database.  
-* Installation Guidelines: Clear instructions on how to get your project up and running (e.g., git clone, git pull, npm init).
-* Screenshots: Screenshots or a GIF of your project in action.
+
+
+* Description: Originally a front end only project with react routing.  This new Full Stack upgrade now includes Express & MongoDB for handling your own database.  Authentication and security to come.
+
+
+* Installation Guidelines: clone repository and npm install dependencies.  start with: "node index.js"
+
+
+* Screenshots: <img width="995" alt="Screen Shot 2021-08-24 at 8 51 24 PM" src="https://user-images.githubusercontent.com/62675858/130708490-26342410-3be6-4b70-8d92-45253158e0f3.png">
+
+
 * Technology used: MongoDB, Express, React, and Node.  
-* Features: Create or login to make deposits and withdrawals.  Track your usage on the alldata page.
+
+
+* Features: Create an account or login to make deposits and withdrawals.  Track your account data on the alldata page.
+
+
 * License: MIT
